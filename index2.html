@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/aabf4ff028.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-side">
+            <div class="weather-gradient"></div>
+            <div class="date-container">
+                <h1 class="date-dayname hm" id="timeoftheplace">4:00</h1>
+                <h2 class="date-dayname day" id="dayoftheplace">Tuesday</h2><span class="date-day dmy" id="dmyoftheplace">15 Jan 2019</span><span
+                    class="location" id="address"><i class="fa-solid fa-location-dot"></i> Paris,
+                    FR</span>
+            </div>
+            <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+                <h1 class="weather-temp" id="temp">29°C</h1>
+                <h3 class="weather-desc" id="disc">Sunny</h3>
+            </div>
+        </div>
+        <div class="info-side">
+            <div class="today-info-container">
+                <div class="today-info">
+                    <div class="humidity"> <span class="title"></span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="humidity"> <span class="title">HUMIDITY</span><span class="value" id="hum">34 %</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wind"> <span class="title">WIND</span><span class="value" id="win">0 km/h</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="pressure"> <span class="title">PRESSURE</span><span class="value" id="pre">x</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="min-temp"> <span class="title">MIN TEMPERATURE</span><span class="value"
+                            id="minT">__________</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="max-temp"> <span class="title">MAX TEMPERATURE</span><span class="value"
+                            id="maxT">__________</span>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="location-container">
+
+                <div class="card-body">
+                    <!-- <h3 class="">Please Enter a valid city name : </h3> -->
+                        <div class="input-group mb-3">
+                            <input id="myText" name="cityName" class="form-control cityName bc" type="text"
+                                placeholder="Enter a valid city name." class="search" onkeydown="search(this)" value="" spellcheck="false">
+                            <button onClick="myFunction()" class="input-group-addon grow btn-go location-button"
+                                id="basic-addon2">Go</button>
+                        </div>
+                    <div class="separator">OR</div>
+                    <a href="index2.html">
+                        <button onClick="window.location.reload();" name="getLocation"
+                            class="grow btn location-button gps">Get device
+                            location.</button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+</body>
+
+</html>
